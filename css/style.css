@@ -1,0 +1,99 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #003366; /* dark blue background */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+    color: #000; 
+}
+
+#page-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f0f0f0; /* light grey page border color */
+    border: 10px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+header, footer {
+    text-align: left; /* align left */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    color: #003366; /* dark blue headers */
+    margin: 0; 
+}
+
+h3 {
+    font-size: 20px;
+    color: #003366; /* dark blue headers */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    padding-left: 20px; 
+    margin: 0; 
+}
+
+nav ul li {
+    margin: 5px 0; 
+}
+
+
+#content-wrapper {
+    display: flex;
+}
+
+#main-content {
+    flex: 1;
+    margin-right: 200px; 
+}
+
+section {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff; /* white section background */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 30px; 
+}
+
+#bul1, #bul2, #bul3, #bul4 {
+    margin: 0;
+    padding: 0;
+}
+
+#clubs-skills {
+    position: absolute;
+    top: 250px; 
+    right: 50px; 
+    width: 180px; 
+}
+
+#clubs-skills h3 {
+    font-size: 15px; /* smaller font size for this section */
+    color: #003366; /* dark blue headers*/
+}
+
+#clubs-skills ul {
+    font-size: 13px; /* smaller font size for list */
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
