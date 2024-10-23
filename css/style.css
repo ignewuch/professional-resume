@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Times New Roman', Times, serif;
     background-color: #003366; /* dark blue background */
@@ -35,27 +34,40 @@ h3 {
     padding-bottom: 5px;
 }
 
-nav {
-    margin-bottom: 20px;
+nav#main-nav ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 10px;
+    overflow: auto;
 }
-
-nav ul {
-    padding-left: 20px; 
-    margin: 0; 
+nav#main-nav ul li {
+    float: left;
+    margin: 0px 5px;
 }
-
-nav ul li {
-    margin: 5px 0; 
+nav#main-nav ul li a {
+    display: block;
+    background-color: grey;
+    font-weight: none;
+    text-decoration: none;
+    text-align: center;
+    color: white;    
+    width: 100px;
+    padding: 10px 0px 10px 0px;
 }
-
+nav#main-nav ul li a:hover {
+    background-color: white;
+    color: grey;
+    border-radius: 40px;
+}
 
 #content-wrapper {
     display: flex;
+    flex-direction: row; /* Added for proper alignment */
 }
 
 #main-content {
     flex: 1;
-    margin-right: 200px; 
+    margin-right: 20px; /* Adjusted margin */
 }
 
 section {
@@ -72,20 +84,18 @@ ul {
 }
 
 #bul1, #bul2, #bul3, #bul4 {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 #clubs-skills {
-    position: absolute;
-    top: 250px; 
-    right: 50px; 
     width: 180px; 
+    margin-top: 20px; /* Add margin for spacing */
 }
 
 #clubs-skills h3 {
     font-size: 15px; /* smaller font size for this section */
-    color: #003366; /* dark blue headers*/
+    color: #003366; /* dark blue headers */
 }
 
 #clubs-skills ul {
@@ -95,5 +105,5 @@ ul {
 footer {
     margin-top: 20px;
     font-size: 14px;
-    color: #666;
+    color: #665;
 }
