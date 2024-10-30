@@ -89,7 +89,7 @@ ul {
 }
 
 #clubs-skills {
-    width: 180px; 
+    width: 800px; 
     margin-top: 20px; /* Add margin for spacing */
 }
 
@@ -99,7 +99,7 @@ ul {
 }
 
 #clubs-skills ul {
-    font-size: 13px; /* smaller font size for list */
+    font-size: 17px; /* smaller font size for list */
 }
 
 footer {
