@@ -41,11 +41,11 @@ nav#main-nav ul {
     list-style-type: none;
     padding: 0;
     margin: 10px;
-    overflow: hidden; /* use overflow:hidden to contain floated elements */
+    overflow: hidden; /* contain floated elements */
 }
 
 nav#main-nav ul li {
-    float: left;
+    float: left; /* float elements side by side */
     margin: 0px 5px;
 }
 
@@ -75,7 +75,7 @@ nav#main-nav ul li a:hover {
 #main-content {
     flex: 1;
     margin-right: 20px; /* adjusted margin */
-    position: relative; /* ensure positioning context if needed */
+    position: relative; /* positioning context for potential absolute elements inside */
 }
 
 section {
@@ -84,6 +84,7 @@ section {
     border-radius: 5px;
     padding: 10px;
     background-color: #fff; /* white section background */
+    position: relative; /* enables absolute positioning of elements inside */
 }
 
 ul {
@@ -96,9 +97,11 @@ ul {
     padding: 0;
 }
 
+/* Example 1: Floating and clearing inside the content section */
 #clubs-skills {
     width: 800px;
     margin-top: 20px; /* add margin for spacing */
+    float: left; /* floated left within the content section */
 }
 
 #clubs-skills h3 {
@@ -110,11 +113,38 @@ ul {
     font-size: 17px; /* smaller font size for list */
 }
 
+/* Example 2: Clearfix for floated elements */
+#clearfix {
+    clear: both; /* ensures elements below this won't float alongside */
+}
+
+/* Example 3: Absolute positioning for a fixed box */
+#fixed-box {
+    position: absolute; /* positioning relative to nearest positioned ancestor */
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    background-color: #ffcc00; /* for visibility */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Example 4: Centering an element using absolute positioning */
+#center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* to precisely center the box */
+    width: 300px;
+    padding: 20px;
+    background-color: #ff6347; /* tomato red */
+    text-align: center;
+}
+
 footer {
     margin-top: 20px;
     font-size: 14px;
     color: #665;
-    position: relative; /* ensure footer stays in position when needed */
-    clear: both; /* clears any floats above the footer */
-}
+    po
+
 
