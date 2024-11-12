@@ -1,23 +1,24 @@
-/* Import Google Fonts */
+/* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
-/* Body Styles */
+/* body styles */
 body {
     background-color: #ffccff; /* light pink background */
     font-family: 'Dancing Script', cursive, sans-serif; /* added font-family fallback */
     color: black; /* text color black */
     margin: 0;
     padding: 0;
+    line-height: 1.5; /* line height for better readability */
 }
 
-/* Navigation Styles */
+/* navigation styles */
 nav#main-nav {
     text-align: center;
     margin: 20px 0;
 }
 
 nav#main-nav ul {
-    list-style-type: none;
+    list-style-type: none; /* remove default list styling */
     padding: 0;
     margin: 0;
     display: inline-block; /* centering the list */
@@ -41,12 +42,12 @@ nav#main-nav ul li a:hover {
     background-color: #ff66b2; /* light pink on hover */
 }
 
-/* Header styles */
+/* header styles */
 h1, h2, h3 {
     color: #ff69b4; /* hot pink headers */
 }
 
-/* Section styles */
+/* section styles */
 section {
     margin: 20px 0;
     padding: 10px; 
@@ -55,7 +56,7 @@ section {
     background-color: #fff; /* white background */
 }
 
-/* Flexbox for image container */
+/* flexbox for image container */
 .image-container {
     display: flex; /* align images next to each other */
     gap: 10px; /* space between images */
@@ -76,7 +77,7 @@ img {
         0 2px 10px #ff8cb3; /* outer pink shadow */
 }
 
-/* Hover effect for sparkle */
+/* hover effect for sparkle */
 img:hover {
     transform: scale(1.05); /* slight zoom effect on hover */
     box-shadow: 
@@ -87,7 +88,7 @@ img:hover {
         0 2px 10px #ff8cb3; /* outer pink shadow */
 }
 
-/* Center footer */
+/* centered footer */
 #footer {
     text-align: center; /* center footer */
     padding: 20px; 
@@ -95,4 +96,76 @@ img:hover {
     border-top: 2px solid #ff69b4; 
     position: relative; /* ensuring footer is positioned correctly */
     clear: both; /* clears any floats above the footer */
+}
+
+/* make page layout responsive */
+@media (max-width: 768px) {
+    /* make the navigation links stack vertically */
+    nav#main-nav ul {
+        display: block;
+    }
+
+    nav#main-nav ul li {
+        margin-bottom: 10px; /* add space between navigation items */
+    }
+
+    /* adjust the size of images on smaller screens */
+    img {
+        width: 100%; /* make images take up the full width */
+        height: auto;
+        border: 3px solid #ff69b4; /* smaller border */
+    }
+}
+
+/* use relative units for font sizing */
+h1 {
+    font-size: 2.5rem; /* relative font size */
+}
+
+h2 {
+    font-size: 2rem; /* relative font size */
+}
+
+h3 {
+    font-size: 1.5rem; /* relative font size */
+}
+
+p {
+    font-size: 1rem; /* base font size for paragraphs */
+}
+
+/* section padding and margins for better spacing */
+section {
+    margin: 2rem 0; /* responsive margin */
+    padding: 1rem; /* responsive padding */
+}
+
+/* general link styling for a consistent look across pages */
+a {
+    color: #ff007f; /* hot pink links */
+    text-decoration: none; /* remove underline */
+}
+
+a:hover {
+    color: #ff66b2; /* light pink on hover */
+}
+
+/* clearfix for floated elements */
+#clearfix {
+    clear: both; /* ensures elements below this won't float alongside */
+}
+
+/* styles for the article list */
+ol#news {
+    list-style-type: decimal;
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* for images inside sections */
+section img {
+    width: 100%; /* make images responsive */
+    max-width: 600px; /* limit image size */
+    display: block; /* remove inline-block spacing */
+    margin: 0 auto 1rem; /* center images */
 }
