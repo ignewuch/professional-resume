@@ -1,7 +1,7 @@
-/* Import Google Fonts */
+/* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
 
-/* Body Styles */
+/* body styles */
 body {
     font-family: 'Times New Roman', Times, serif, Arial, sans-serif; /* added font-family fallback */
     background-color: #d2f4d2; /* light green background */
@@ -10,7 +10,7 @@ body {
     padding: 20px;
 }
 
-/* Navigation Styles */
+/* navigation styles */
 nav#main-nav {
     text-align: center;
     background-color: #005700; /* dark green background */
@@ -18,7 +18,7 @@ nav#main-nav {
 }
 
 nav#main-nav ul {
-    list-style-type: none;
+    list-style-type: none; /* remove list bullets */
     padding: 0;
     margin: 0;
     display: inline-flex; /* inline flex to align items horizontally */
@@ -35,7 +35,7 @@ nav#main-nav ul li a {
     color: white; /* text color */
     background-color: #005700; /* same background as nav */
     border-radius: 5px; /* rounded corners */
-    padding: 10px 20px; /* Padding for the links */
+    padding: 10px 20px; /* padding for the links */
     transition: background-color 0.3s; /* smooth transition for hover effect */
 }
 
@@ -44,7 +44,7 @@ nav#main-nav ul li a:hover {
     border-radius: 5px; /* rounded corners */
 }
 
-/* Header Styles */
+/* header styles */
 h1 {
     text-align: center;
     color: #005700; /* dark green header */
@@ -56,13 +56,13 @@ h2 {
     margin-top: 20px;
 }
 
-/* Footer Styles */
+/* footer styles */
 footer {
     text-align: center;
     margin-top: 20px;
 }
 
-/* Button Styles */
+/* button styles */
 .button {
     display: block; /* make button a block-level element */
     padding: 10px 20px;
@@ -79,25 +79,10 @@ footer {
     background-color: #3A7B4A; /* lighter green on hover */
 }
 
-/* Image Styles */
+/* image styles */
 img {
     display: block; 
     width: 150px; /* set width of each image */
     margin: 10px auto; /* centers images */
-    border-radius: 8px; /* rounded corners for the images */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* light shadow for images */
-}
-
-/* Link Styles */
-a {
-    display: block; /* makes YouTube links look like buttons */
-    text-align: center; /* centers the link */
-    color: #2C5D34; /* match color for button */
-    text-decoration: underline; /* underline the links */
-    margin: 10px auto; 
-}
-
-a:hover {
-    text-decoration: none; /* removes underline on hover */
-}
+   
 
