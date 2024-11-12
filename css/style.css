@@ -1,8 +1,15 @@
-/* Import Google Fonts */
+/* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Times+New+Roman&display=swap');
 
+/* css reset (can be added to reset.css) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Times New Roman', Times, serif, Arial, sans-serif; /* added font fallback */
+    font-family: 'Times New Roman', Times, serif, Arial, sans-serif; /* primary and fallback fonts */
     background-color: #003366; /* dark blue background */
     margin: 0;
     padding: 20px;
@@ -11,53 +18,61 @@ body {
 }
 
 #page-wrapper {
-    max-width: 1000px;
+    max-width: 100%; /* use 100% width for responsiveness */
     margin: 0 auto;
-    background-color: #f0f0f0; /* light grey page border color */
+    background-color: #f0f0f0; /* light grey background */
     border: 10px solid #ccc;
     border-radius: 10px;
     padding: 20px;
+    width: 80%; /* responsive width */
 }
 
 header, footer {
-    text-align: left; /* align left */
+    text-align: center; /* center align the header and footer */
     margin-bottom: 20px;
+    color: white;
 }
 
 h2 {
-    font-size: 26px;
+    font-size: 2.5em; /* use relative size */
     color: #003366; /* dark blue headers */
     margin: 0;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 1.6em; /* slightly smaller heading */
     color: #003366; /* dark blue headers */
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
 }
 
+/* centered horizontal navigation */
+nav#main-nav {
+    text-align: center;
+    background-color: #003366;
+    padding: 10px 0;
+}
+
 nav#main-nav ul {
     list-style-type: none;
     padding: 0;
-    margin: 10px;
-    overflow: hidden; /* contain floated elements */
+    margin: 0;
+    display: flex;
+    justify-content: center; /* center the nav links */
 }
 
 nav#main-nav ul li {
-    float: left; /* float elements side by side */
-    margin: 0px 5px;
+    margin: 0 15px;
 }
 
 nav#main-nav ul li a {
     display: block;
     background-color: grey;
-    font-weight: none;
+    font-weight: normal;
     text-decoration: none;
     text-align: center;
     color: white;
-    width: 100px;
-    padding: 10px 0;
+    padding: 0.5em 1.2em; /* use relative units */
 }
 
 nav#main-nav ul li a:hover {
@@ -68,23 +83,23 @@ nav#main-nav ul li a:hover {
 
 #content-wrapper {
     display: flex;
-    flex-direction: row; /* layout the content side by side */
-    justify-content: space-between; /* optional, distributes space between the items */
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #main-content {
     flex: 1;
-    margin-right: 20px; /* adjusted margin */
-    position: relative; /* positioning context for potential absolute elements inside */
+    margin-right: 2%; /* adjusted margin */
+    padding: 10px;
 }
 
 section {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
-    background-color: #fff; /* white section background */
-    position: relative; /* enables absolute positioning of elements inside */
+    padding: 1.5em;
+    background-color: #fff;
+    position: relative;
 }
 
 ul {
@@ -92,59 +107,95 @@ ul {
     padding-left: 30px;
 }
 
-#bul1, #bul2, #bul3, #bul4 {
-    margin: 0;
-    padding: 0;
-}
-
-/* Example 1: Floating and clearing inside the content section */
 #clubs-skills {
-    width: 800px;
-    margin-top: 20px; /* add margin for spacing */
-    float: left; /* floated left within the content section */
+    width: 100%; /* make this responsive */
+    margin-top: 2em;
+    float: left;
 }
 
 #clubs-skills h3 {
-    font-size: 15px; /* smaller font size for this section */
-    color: #003366; /* dark blue headers */
+    font-size: 1.2em;
+    color: #003366;
 }
 
 #clubs-skills ul {
-    font-size: 17px; /* smaller font size for list */
+    font-size: 1.1em;
 }
 
-/* Example 2: Clearfix for floated elements */
 #clearfix {
-    clear: both; /* ensures elements below this won't float alongside */
+    clear: both; /* clear floats */
 }
 
-/* Example 3: Absolute positioning for a fixed box */
 #fixed-box {
-    position: absolute; /* positioning relative to nearest positioned ancestor */
+    position: absolute;
     top: 20px;
     right: 20px;
     width: 200px;
-    background-color: #ffcc00; /* for visibility */
+    background-color: #ffcc00;
     padding: 10px;
     border-radius: 5px;
 }
 
-/* Example 4: Centering an element using absolute positioning */
 #center-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* to precisely center the box */
+    transform: translate(-50%, -50%);
     width: 300px;
-    padding: 20px;
-    background-color: #ff6347; /* tomato red */
+    padding: 1em;
+    background-color: #ff6347;
     text-align: center;
 }
 
+/* footer styles */
 footer {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 1em;
     color: #665;
-    po
+}
+
+/* additional responsive elements */
+@media screen and (max-width: 768px) {
+    /* stack the layout for smaller screens */
+    #content-wrapper {
+        flex-direction: column;
+    }
+
+    #main-content, #clubs-skills {
+        width: 100%; /* full width on smaller screens */
+        margin-right: 0;
+    }
+
+    nav#main-nav ul {
+        flex-direction: column; /* stack navigation links */
+    }
+
+    nav#main-nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* additional unique styles */
+#floating-section {
+    float: left;
+    width: 48%;
+    margin: 1% 1%;
+    padding: 15px;
+    background-color: #add8e6;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#floating-section-2 {
+    float: right;
+    width: 48%;
+    margin: 1% 1%;
+    padding: 15px;
+    background-color: #add8e6;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 
