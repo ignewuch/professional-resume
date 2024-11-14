@@ -33,6 +33,11 @@ header, footer {
     color: white;
 }
 
+/* specific change to top heading number and email (assuming it's in a header) */
+header h2, header p {
+    color: #003366; /* change to dark blue for number and email */
+}
+
 h2 {
     font-size: 2.5em; /* use relative size */
     color: #003366; /* dark blue headers */
@@ -126,76 +131,6 @@ ul {
     clear: both; /* clear floats */
 }
 
-#fixed-box {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 200px;
-    background-color: #ffcc00;
-    padding: 10px;
-    border-radius: 5px;
-}
 
-#center-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 1em;
-    background-color: #ff6347;
-    text-align: center;
-}
-
-/* footer styles */
-footer {
-    margin-top: 20px;
-    font-size: 1em;
-    color: #665;
-}
-
-/* additional responsive elements */
-@media screen and (max-width: 768px) {
-    /* stack the layout for smaller screens */
-    #content-wrapper {
-        flex-direction: column;
-    }
-
-    #main-content, #clubs-skills {
-        width: 100%; /* full width on smaller screens */
-        margin-right: 0;
-    }
-
-    nav#main-nav ul {
-        flex-direction: column; /* stack navigation links */
-    }
-
-    nav#main-nav ul li {
-        margin: 10px 0;
-    }
-}
-
-/* additional unique styles */
-#floating-section {
-    float: left;
-    width: 48%;
-    margin: 1% 1%;
-    padding: 15px;
-    background-color: #add8e6;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#floating-section-2 {
-    float: right;
-    width: 48%;
-    margin: 1% 1%;
-    padding: 15px;
-    background-color: #add8e6;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
 
 
